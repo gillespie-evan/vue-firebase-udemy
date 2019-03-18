@@ -4,6 +4,18 @@
     <title>Vue Basics</title>
     <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+    .one{
+        color: green;
+    }
+    .two{
+        text-decoration: line-through;
+    }
+
+</style>
+
+
+
 </head>
 
 <body>
@@ -11,7 +23,9 @@
     <div id="app">
         <h2>{{ title }}</h2>
         <p>{{ greet('morning') }}</p>
-        <a v-bind:href="url">Youtube</a>
+        <a :href="url">Youtube</a>
+        <div :class="classes">Classes from Instance</div>
+        <input type="text" :value="name">
     </div>
 
     <script src="app.js"></script>
