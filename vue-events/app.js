@@ -1,13 +1,19 @@
 new Vue({
     el: '#app',
     data:{
-        title: 'Learning Vue',
-        wage: 10
-       
+        title: 'Vue Canvas and coords',
+        chords: {
+            x: 0,
+            y: 0
+        }
     },
     methods: {
-        changeWage(amount){
-            this.wage += amount
+        logEvent(e){
+            console.log(e)
+        },
+        logCoords(e){
+            this.coords.x = e.offsetX
+            this.coords.y = e.offsetY
         }
         
     }
